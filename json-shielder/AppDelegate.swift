@@ -23,6 +23,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     let window = UIWindow()
     window.makeKeyAndVisible()
     window.rootViewController = MainViewController()
+    
+    if #available(iOS 13, *) {
+      window.overrideUserInterfaceStyle = .light
+    }
+    
     self.window = window
   }
 }
