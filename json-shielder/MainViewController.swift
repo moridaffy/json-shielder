@@ -63,6 +63,7 @@ class MainViewController: UIViewController {
     button.layer.masksToBounds = true
     button.backgroundColor = UIColor.systemBlue
     button.setTitle("Shield", for: .normal)
+    button.tag = 1
     return button
   }()
   
@@ -73,6 +74,7 @@ class MainViewController: UIViewController {
     button.layer.masksToBounds = true
     button.backgroundColor = UIColor.systemBlue
     button.setTitle("Unshield", for: .normal)
+    button.tag = 2
     return button
   }()
   
@@ -90,6 +92,9 @@ class MainViewController: UIViewController {
   
   override func viewDidLoad() {
     super.viewDidLoad()
+    
+    shieldButton.addTarget(self, action: #selector(buttonTapped(_:)), for: .touchUpInside)
+    unshieldButton.addTarget(self, action: #selector(buttonTapped(_:)), for: .touchUpInside)
   }
   
   private func setupLayout() {
@@ -143,5 +148,23 @@ class MainViewController: UIViewController {
       unshieldButton.bottomAnchor.constraint(equalTo: shieldButton.bottomAnchor),
       unshieldButton.widthAnchor.constraint(equalTo: shieldButton.widthAnchor)
     ])
+  }
+  
+  @objc private func buttonTapped(_ sender: UIButton) {
+    guard let input = topTextView.text,
+          !input.isEmpty else { return }
+    
+    let output: String?
+    
+    switch sender.tag {
+    case 1:
+      output = JsonHelper.shield(input)
+    case 2:
+      output = JsonHelper.unshield(input)
+    default:
+      return
+    }
+    
+    bottomTextView.text = output
   }
 }
