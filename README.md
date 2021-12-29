@@ -8,7 +8,7 @@
 <h5 align="center">Simple iOS/macOS app for escaping/unescaping json strings</h5>
 
 <h1 align="center">
-<img src="https://raw.githubusercontent.com/moridaffy/json-shielder/master/Extra/screenshot_mac.png" width="250"> <img src="https://raw.githubusercontent.com/moridaffy/json-shielder/master/Extra/screenshot_ios.png" width="250">
+<img src="https://raw.githubusercontent.com/moridaffy/json-shielder/master/Extra/screenshot_mac.png" height="450"> <img src="https://raw.githubusercontent.com/moridaffy/json-shielder/master/Extra/screenshot_ios.png" width="250">
 </h1>
 
 <p align="center">
