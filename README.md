@@ -20,6 +20,16 @@
 ## About
 This is a simple app made for demonstrating the fact, that the same app can run on both iOS and macOS devices. There's almost no practical use for it though :)
 
+### Unescaped string
+```
+{"object":{"ids":[13,23,45,123],"tags":["free","cool","fresh"],"name":"unique object"}}
+```
+
+### Escaped string
+```
+{\"object\":{\"ids\":[13,23,45,123],\"tags\":[\"free\",\"cool\",\"fresh\"],\"name\":\"unique object\"}}
+```
+
 ## How to install
 * Setup signing with your Apple ID
 * Select target to run app (iOS device/simulator or your Mac)
